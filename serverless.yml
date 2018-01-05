@@ -10,7 +10,7 @@ plugins:
   - serverless-plugin-tracing
 
 package:
-  individually: true
+  individually: false
 
 provider:
   name: aws

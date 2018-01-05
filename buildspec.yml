@@ -1,0 +1,19 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - npm install
+      - npm install -g serverless
+  build:
+  post_build:
+    commands:
+      - serverless package
+
+artifacts:
+  files:
+    - serverless.yml
+    - ./.serverless/cloudformation-template-create-stack.json
+    - ./.serverless/insight-data-api.zip
+  discard-paths: yes
+  
