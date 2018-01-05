@@ -1,0 +1,52 @@
+{
+  "name": "insight-data-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/PerfectChannel/insight-api.git",
+  "author": "Jared Russell <Jared.Russell@perfectchannel.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/aws-lambda": "0.0.22",
+    "@types/elasticsearch": "^5.0.19",
+    "@types/faker": "^4.1.2",
+    "@types/jest": "^22.0.0",
+    "@types/node": "^8.0.57",
+    "chai": "^4.1.2",
+    "faker": "^4.1.0",
+    "jest": "^22.0.4",
+    "serverless": "^1.25.0",
+    "serverless-offline": "^3.16.0",
+    "serverless-plugin-git-variables": "^2.0.0",
+    "serverless-plugin-tracing": "^2.0.0",
+    "serverless-webpack": "^4.0.0",
+    "ts-jest": "^22.0.0",
+    "ts-loader": "^2.3.7",
+    "ts-node": "3.3.0",
+    "typescript": "^2.5.2",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "aws-lambda": "^0.1.2",
+    "elasticsearch": "^14.0.0"
+  },
+  "scripts": {
+    "launch": "ts-node scripts/launch",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
