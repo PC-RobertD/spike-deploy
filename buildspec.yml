@@ -1,12 +1,15 @@
-version: 0.1
+version: 0.2
+
+env:
+  variables:
+    ELASTICSEARCH_NODES: ""
+    TENANT_CLAIM: "custom:tenant"
 
 phases:
   install:
     commands:
       - npm install
       - npm install -g serverless
-      - export ELASTICSEARCH_NODES=blah1,blah2
-      - export TENANT_CLAIM=custom:tenant
   build:
     commands:
       - serverless package
