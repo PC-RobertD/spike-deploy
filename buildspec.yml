@@ -12,7 +12,7 @@ phases:
       - npm install -g serverless
   build:
     commands:
-      - serverless package
+      - serverless package | tee deploy.out 
 
 artifacts:
   files:
