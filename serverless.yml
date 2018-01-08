@@ -4,7 +4,7 @@ service:
 plugins:
   - serverless-webpack
   #- serverless-offline
-  - serverless-plugin-git-variables
+  #- serverless-plugin-git-variables
   # Note that this plugin is a stop-gap measure until official xray support is added to Serverless. 
   # This work is being tracked here: https://github.com/serverless/serverless/issues/3495
   - serverless-plugin-tracing
@@ -33,7 +33,7 @@ provider:
 functions:
   get:
     handler: src/data/get.get
-    description: Built from ${git:sha1} on branch ${git:branch}
+    description: Built 1
     events:
       - http:
           path: data/{type}/{id}
@@ -42,7 +42,7 @@ functions:
             #arn: ${env:COGNITO_AUTHORIZER_ARN}
   create:
     handler: src/data/create.create
-    description: Built from ${git:sha1} on branch ${git:branch}
+    description: Built 2
     events:
       - http:
           path: data/{type}
@@ -51,7 +51,7 @@ functions:
             #arn: ${env:COGNITO_AUTHORIZER_ARN}
   update:
     handler: src/data/update.update
-    description: Built from ${git:sha1} on branch ${git:branch}
+    description: Built 3
     events:
       - http:
           path: data/{type}/{id}
@@ -60,7 +60,7 @@ functions:
             #arn: ${env:COGNITO_AUTHORIZER_ARN}
   delete:
     handler: src/data/delete.delete
-    description: Built from ${git:sha1} on branch ${git:branch}
+    description: Built 4
     events:
       - http:
           path: data/{type}/{id}
@@ -69,7 +69,7 @@ functions:
             #arn: ${env:COGNITO_AUTHORIZER_ARN}
   debug:
     handler: src/debug/info.info
-    description: Built from ${git:sha1} on branch ${git:branch}
+    description: Built 5
     events:
       - http:
           path: debug
