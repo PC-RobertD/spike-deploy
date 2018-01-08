@@ -18,7 +18,7 @@ phases:
     commands:
       - serverless package
       #- serverless deploy --stage dev --verbose
-  post-build:
+  post_build:
     commands:
       - mv ./deploymentspec.yml ./.serverless/buildspec.yml
 
