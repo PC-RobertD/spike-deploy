@@ -3,7 +3,7 @@ service:
 
 plugins:
   - serverless-webpack
-  - serverless-offline
+  #- serverless-offline
   - serverless-plugin-git-variables
   # Note that this plugin is a stop-gap measure until official xray support is added to Serverless. 
   # This work is being tracked here: https://github.com/serverless/serverless/issues/3495
