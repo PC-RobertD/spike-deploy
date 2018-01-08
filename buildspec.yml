@@ -13,12 +13,13 @@ phases:
   build:
     commands:
       #- serverless package | tee deploy.out 
-      - serverless deploy --stage dev --verbose
+      - serverless deploy --stage dev --verbose | tee deploy.out
 
 artifacts:
   files:
     - serverless.yml
     - ./.serverless/cloudformation-template-create-stack.json
     - ./.serverless/insight-data-api.zip
+    - deploy.out
   discard-paths: yes
   
