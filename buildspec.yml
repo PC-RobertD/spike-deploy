@@ -22,8 +22,9 @@ phases:
 artifacts:
   files:
     - serverless.yml
-    - ./.serverless/cloudformation-template-create-stack.json
-    - ./.serverless/insight-data-api.zip
+    - ./.serverless/*
+    #- cloudformation-template-create-stack.json
+    #- ./.serverless/insight-data-api.zip
     #- deploy.out
   discard-paths: yes
   
