@@ -5,6 +5,7 @@ phases:
     commands:
       - npm install
       - npm install -g serverless
+      - export ELASTICSEARCH_NODES=blah1,blah2
   build:
     commands:
       - serverless package
