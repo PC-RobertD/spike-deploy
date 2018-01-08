@@ -8,7 +8,7 @@ phases:
   build:
   post_build:
     commands:
-      - serverless package 
+      - serverless package
 
 artifacts:
   files:
