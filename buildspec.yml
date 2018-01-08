@@ -20,7 +20,7 @@ phases:
       #- serverless deploy --stage dev --verbose
   post_build:
     commands:
-      - mv ./deploymentspec.yml ./.serverless/buildspec.yml
+      - mv --force ./deploymentspec.yml ./.serverless/buildspec.yml
 
 artifacts:
   files:
