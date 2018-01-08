@@ -11,8 +11,9 @@ phases:
     commands:
       - npm install
       - npm install -g serverless
-      #- npm install serverless-plugin-webpack --save-dev
-      #- npm install
+      - npm install serverless-plugin-webpack --save-dev
+      - npm install serverless-plugin-git-variables --save-dev
+      - npm install serverless-plugin-tracing
   build:
     commands:
       - serverless package
