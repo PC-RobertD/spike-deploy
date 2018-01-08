@@ -4,16 +4,19 @@ env:
   variables:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
+    SLS_DEBUG: "*"
 
 phases:
   install:
     commands:
       - npm install
       - npm install -g serverless
+      - npm install serverless-plugin-webpack --save-dev
+      - npm install
   build:
     commands:
       #- serverless package | tee deploy.out 
-      - serverless deploy --stage dev --verbose | tee deploy.out
+      - serverless deploy --stage dev --verbose
 
 artifacts:
   files:
