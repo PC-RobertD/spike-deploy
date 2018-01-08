@@ -16,7 +16,7 @@ phases:
       - npm install serverless-plugin-tracing --save-dev
   build:
     commands:
-      - serverless package
+      - serverless package --stage dev --region eu-west-1
       #- serverless deploy --stage dev --verbose
 
 artifacts:
