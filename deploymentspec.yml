@@ -5,29 +5,28 @@ env:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
     SLS_DEBUG: "*"
+    DEPLOYMENT_STAGE: "dev"
+    DEPLOYMENT_REGION: "eu-west-1"
 
 phases:
   install:
     commands:
       - npm install
       - npm install -g serverless
-      - npm install serverless-plugin-webpack --save-dev
+      #- npm install serverless-plugin-webpack --save-dev
       #- npm install serverless-plugin-git-variables --save-dev
       - npm install serverless-plugin-tracing --save-dev
   build:
     commands:
-      - serverless package
-      #- serverless deploy --stage dev --verbose
-  post-build:
-    commands:
-      - mv ./deploymentspec.yml ./.serverless/buildspec.yml
+      #- serverless package
+      - serverless deploy --stage $DEPLOYMENT_STAGE --region $DEPLOYMENT_REGION --verbose --package ./
 
-artifacts:
-  files:
-    - serverless.yml
-    - ./.serverless/*
+#artifacts:
+  #files:
+    #- serverless.yml
+    #- ./.serverless/*
     #- cloudformation-template-create-stack.json
     #- ./.serverless/insight-data-api.zip
     #- deploy.out
-  discard-paths: yes
+  #discard-paths: yes
   
