@@ -12,7 +12,8 @@ phases:
       - npm install -g serverless
   build:
     commands:
-      - serverless package | tee deploy.out 
+      #- serverless package | tee deploy.out 
+      - serverless deploy --stage dev --verbose
 
 artifacts:
   files:
