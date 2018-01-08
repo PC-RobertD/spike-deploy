@@ -38,8 +38,8 @@ functions:
       - http:
           path: data/{type}/{id}
           method: get
-          authorizer:
-            arn: ${env:COGNITO_AUTHORIZER_ARN}
+          #authorizer:
+            #arn: ${env:COGNITO_AUTHORIZER_ARN}
   create:
     handler: src/data/create.create
     description: Built from ${git:sha1} on branch ${git:branch}
@@ -47,8 +47,8 @@ functions:
       - http:
           path: data/{type}
           method: post
-          authorizer:
-            arn: ${env:COGNITO_AUTHORIZER_ARN}
+          #authorizer:
+            #arn: ${env:COGNITO_AUTHORIZER_ARN}
   update:
     handler: src/data/update.update
     description: Built from ${git:sha1} on branch ${git:branch}
@@ -56,8 +56,8 @@ functions:
       - http:
           path: data/{type}/{id}
           method: put
-          authorizer:
-            arn: ${env:COGNITO_AUTHORIZER_ARN}
+          #authorizer:
+            #arn: ${env:COGNITO_AUTHORIZER_ARN}
   delete:
     handler: src/data/delete.delete
     description: Built from ${git:sha1} on branch ${git:branch}
@@ -65,8 +65,8 @@ functions:
       - http:
           path: data/{type}/{id}
           method: delete
-          authorizer:
-            arn: ${env:COGNITO_AUTHORIZER_ARN}
+          #authorizer:
+            #arn: ${env:COGNITO_AUTHORIZER_ARN}
   debug:
     handler: src/debug/info.info
     description: Built from ${git:sha1} on branch ${git:branch}
@@ -74,5 +74,5 @@ functions:
       - http:
           path: debug
           method: get
-          authorizer:
-            arn: ${env:COGNITO_AUTHORIZER_ARN}
+          #authorizer:
+            #arn: ${env:COGNITO_AUTHORIZER_ARN}
