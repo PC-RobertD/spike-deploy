@@ -11,7 +11,7 @@ env:
 phases:
   install:
     commands:
-      - npm install
+      #- npm install
       - npm install -g serverless
       - npm install serverless-plugin-webpack --save-dev
       #- npm install serverless-plugin-git-variables --save-dev

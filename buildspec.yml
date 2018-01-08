@@ -4,7 +4,9 @@ env:
   variables:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
-    SLS_DEBUG: "*"
+    SLS_DEBUG: "*"    
+    DEPLOYMENT_STAGE: "dev"
+    DEPLOYMENT_REGION: "eu-west-1"
 
 phases:
   install:
@@ -20,7 +22,7 @@ phases:
       #- serverless deploy --stage dev --verbose
   post_build:
     commands:
-      - mv --force ./deploymentspec.yml ./.serverless/buildspec.yml
+      - mv ./deploymentspec.yml ./.serverless/buildspec.yml
 
 artifacts:
   files:
