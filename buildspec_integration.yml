@@ -5,7 +5,7 @@ env:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
     SLS_DEBUG: "*"
-    DEPLOYMENT_STAGE: "dev"
+    DEPLOYMENT_STAGE: "int"
     DEPLOYMENT_REGION: "eu-west-1"
 
 phases:
