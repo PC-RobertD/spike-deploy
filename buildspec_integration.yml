@@ -11,16 +11,15 @@ env:
 phases:
   install:
     commands:
-      #- npm install
       - npm install -g serverless
-      - npm install -g webpack --save-dev
-      - npm install -g serverless-plugin-webpack
-      #- npm install serverless-plugin-git-variables --save-dev 
-      - npm install -g serverless-plugin-tracing
+      - npm install serverless-plugin-webpack --save-dev
+      #- npm install serverless-plugin-git-variables --save-dev
+      - npm install serverless-plugin-tracing --save-dev
+      - npm install
   build:
     commands:
       #- serverless package
-      - serverless deploy --stage $DEPLOYMENT_STAGE --region $DEPLOYMENT_REGION --verbose --package ./
+      - serverless deploy --stage $DEPLOYMENT_STAGE --region $DEPLOYMENT_REGION --verbose
 
 #artifacts:
   #files:

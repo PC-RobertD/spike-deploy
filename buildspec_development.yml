@@ -18,7 +18,8 @@ phases:
       - npm install
   build:
     commands:
-      - serverless package
+      - serverless deploy --stage $DEPLOYMENT_STAGE --region $DEPLOYMENT_REGION --verbose
+      #- serverless package
       #- serverless deploy --stage dev --verbose
   #post_build:
     #commands:
