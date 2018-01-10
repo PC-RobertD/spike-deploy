@@ -5,7 +5,7 @@ env:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
     SLS_DEBUG: "*"    
-    DEPLOYMENT_STAGE: "dev"
+    DEPLOYMENT_STAGE: "stubs"
     DEPLOYMENT_REGION: "eu-west-1"
 
 phases:
@@ -19,19 +19,4 @@ phases:
   build:
     commands:
       - serverless deploy --stage $DEPLOYMENT_STAGE --region $DEPLOYMENT_REGION --verbose
-      #- serverless package
-      #- serverless deploy --stage dev --verbose
-  #post_build:
-    #commands:
-      #- mv ./deploymentspec.yml ./.serverless/buildspec.yml
-
-#artifacts:
-  #files:
-    #- serverless.yml
-    #- buildspec*.yml
-    #- ./.serverless/*
-    ##- cloudformation-template-create-stack.json
-    ##- ./.serverless/insight-data-api.zip
-    ##- deploy.out
-  #discard-paths: yes
   
