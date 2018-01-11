@@ -5,8 +5,10 @@ env:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
     SLS_DEBUG: "*"    
-    DEPLOYMENT_STAGE: "dev"
-    DEPLOYMENT_REGION: "eu-west-1"
+    #DEPLOYMENT_STAGE: "dev"
+    #DEPLOYMENT_REGION: "eu-west-1"
+  #parameter-store:
+    #var_name: param_store_var_name
 
 phases:
   install:
@@ -18,7 +20,7 @@ phases:
       - npm install
   build:
     commands:
-      - serverless deploy --stage dev --region eu-west-1 --verbose
+      - serverless deploy --stage $SERVERLESS_DEPLOYMENT_STAGE --region $DEPLOYMENT_REGION --verbose
       #- serverless package
       #- serverless deploy --stage dev --verbose
   #post_build:
