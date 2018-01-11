@@ -19,7 +19,7 @@ phases:
   build:
     commands:
       #- serverless package
-      - serverless deploy --stage $DEPLOYMENT_STAGE --region $DEPLOYMENT_REGION --verbose
+      - serverless deploy --stage $SERVERLESS_DEPLOYMENT_STAGE --region $SERVERLESS_DEPLOYMENT_REGION --verbose
 
 #artifacts:
   #files:
