@@ -5,6 +5,8 @@ env:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
     SLS_DEBUG: "*"
+    SERVERLESS_DEPLOYMENT_STAGE: "stubs"
+    SERVERLESS_DEPLOYMENT_REGION: "eu-west-1"
 
 phases:
   install:
