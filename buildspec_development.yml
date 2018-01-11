@@ -5,8 +5,8 @@ env:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
     SLS_DEBUG: "*"    
-    #DEPLOYMENT_STAGE: "dev"
-    #DEPLOYMENT_REGION: "eu-west-1"
+    SERVERLESS_DEPLOYMENT_STAGE: "dev"
+    SERVERLESS_DEPLOYMENT_REGION: "eu-west-1"
   #parameter-store:
     #var_name: param_store_var_name
 

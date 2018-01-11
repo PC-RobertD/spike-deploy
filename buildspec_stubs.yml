@@ -4,19 +4,15 @@ env:
   variables:
     ELASTICSEARCH_NODES: ""
     TENANT_CLAIM: "custom:tenant"
-    SLS_DEBUG: "*"    
-    #DEPLOYMENT_STAGE: "stubs"
-    #DEPLOYMENT_REGION: "eu-west-1"
+    SLS_DEBUG: "*"
 
 phases:
   install:
     commands:      
       - npm install -g serverless
       - npm install serverless-plugin-webpack --save-dev
-      #- npm install serverless-plugin-git-variables --save-dev
       - npm install serverless-plugin-tracing --save-dev
       - npm install
   build:
     commands:
       - serverless deploy --stage $SERVERLESS_DEPLOYMENT_STAGE --region $SERVERLESS_DEPLOYMENT_REGION --verbose
-  
