@@ -15,6 +15,7 @@
     "chai": "^4.1.2",
     "faker": "^4.1.0",
     "jest": "^22.0.4",
+    "jest-cli": "^22.1.4",
     "serverless": "^1.25.0",
     "serverless-offline": "^3.16.0",
     "serverless-plugin-git-variables": "^2.0.0",
@@ -25,7 +26,7 @@
     "ts-node": "3.3.0",
     "typescript": "^2.5.2",
     "uglifyjs-webpack-plugin": "^1.1.5",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0"    
   },
   "dependencies": {
     "aws-lambda": "^0.1.2",
@@ -39,7 +40,7 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",    
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -47,6 +48,15 @@
       "jsx",
       "json",
       "node"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ],    
+    "coverageDirectory": "test-coverage",
+    "collectCoverageFrom": [
+            "src/**/*.ts"
     ]
   }
 }
