@@ -16,6 +16,7 @@ provider:
   name: aws
   region: eu-west-1
   memorySize: 128
+  # stage: ${opt:stage, self:custom.defaultStage}
   stage: dev
   runtime: nodejs6.10
   environment:
@@ -29,6 +30,15 @@ provider:
         - "xray:PutTelemetryRecords"
       Resource:
         - "*"
+  # profile: ${self:custom.profiles.${self:provider.stage}}
+
+# custom:
+#   defaultStage: dev
+#   profiles:
+#     dev: devProfile
+#     int: intProfile
+#     stubs: stubsProfile
+#     prod: prodProfile
 
 functions:
   get:
