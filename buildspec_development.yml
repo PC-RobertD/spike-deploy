@@ -15,7 +15,7 @@ phases:
     commands:
       - npm install
   build:
-    commands:
+    commands: 
       - npm run test
       - node_modules/serverless/bin/serverless deploy --stage $SERVERLESS_DEPLOYMENT_STAGE --region $SERVERLESS_DEPLOYMENT_REGION --verbose
       #- serverless package
